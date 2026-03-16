@@ -12,10 +12,10 @@ print("student results:", student)
 
 marks_list = list(student.values())
 
-def sum_of_marks(marks_list,n):
-    if n <= 0:
+def sum_of_marks(marks_list):
+    if  marks_list == []:
         return 0        
-    return marks_list[n-1] + sum_of_marks(marks_list,n-1)
+    return marks_list[0] + sum_of_marks(marks_list[1:])
 
 total_marks = sum_of_marks(marks_list, len(marks_list))
 print("Total marks of all students: ", total_marks)
